@@ -2,6 +2,7 @@
 	"name": "@pandazy/mole-config",
 	"version": "0.1.2",
 	"description": "Configuration files for TypeScript projects",
+	"main": ".eslintrc.json",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/pandazy/mole-config.git"
