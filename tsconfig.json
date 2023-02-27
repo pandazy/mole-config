@@ -4,7 +4,6 @@
     "target": "es6",
     "module": "commonjs",
     "importHelpers": true,
-    "outDir": "./dist",
     "lib": [
       "dom",
       "es2021"
@@ -18,12 +17,6 @@
     "noFallthroughCasesInSwitch": true,
     /* Module Resolution Options */
     "moduleResolution": "node",
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
     "esModuleInterop": true,
     "types": [
       "jest",
