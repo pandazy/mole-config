@@ -1,19 +1,5 @@
-"use strict";
+'use strict';
 
 module.exports = {
-  presets: [
-    "@babel/preset-env",
-    "@babel/preset-typescript"
-  ],
-  plugins: [
-    [
-      "module-resolver",
-      {
-        alias: {
-          "@r": "./src",
-          "@lib": "./src/lib",
-        },
-      },
-    ],
-  ],
+  presets: ['@babel/preset-env', '@babel/preset-typescript'],
 };

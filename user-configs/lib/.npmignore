@@ -1,0 +1,39 @@
+# vscode settings
+.vscode
+.husky
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript config
+tsconfig.json
+tsconfig.build.json
+
+# Test settings
+jest.config.*
+
+# Linting
+.eslintignore
+.eslintrc.*
+.prettierrc
+.prettierrc.*
+commitlint.config.js
+
+# Source code
+src
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# pandazy developer's personal settings
+.pandazy

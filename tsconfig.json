@@ -4,11 +4,7 @@
     "target": "es6",
     "module": "commonjs",
     "importHelpers": true,
-    "lib": [
-      "dom",
-      "es2021"
-    ],
-    "jsx": "react",
+    "lib": ["dom", "es2021"],
     "declaration": true,
     "sourceMap": true,
     /* Strict Type-Checking Options */
@@ -24,13 +20,9 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "types": [
-      "jest",
-      "node"
-    ],
-    "paths": {
-      "@r/*": ["*"],
-      "@lib/*": ["lib/*"],
-    }
-  }
+    "types": ["jest", "node"],
+    "outDir": "dist",
+    "baseUrl": "."
+  },
+  "include": ["./src/*"]
 }
