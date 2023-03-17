@@ -1,5 +1,5 @@
 {
-	"extends": "@pandazy/mole-config/dist/tsconfig.json",
+	"extends": "@pandazy/mole-config/tsconfig.json",
 	"compilerOptions": {
 		"outDir": "dist",
 		"baseUrl": "."
