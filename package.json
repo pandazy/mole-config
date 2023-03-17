@@ -36,6 +36,10 @@
     "tslib": "^2.5.0",
     "yargs": "^17.7.1"
   },
+  "files": [
+    "dist",
+    "bin"
+  ],
   "bin": {
     "cfguntar": "./bin/untar.js",
     "cfgpaths": "./bin/map-paths.js"

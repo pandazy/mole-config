@@ -1,5 +1,5 @@
 "use strict";
 
-const babelConfig = require("@pandazy/mole-config/dist/babel.config.js");
+const { default: babelConfig } = require("@pandazy/mole-config/dist/babel.config.js");
 
 module.exports = babelConfig;

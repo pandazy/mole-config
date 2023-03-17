@@ -3,6 +3,6 @@
 jest.config.ts
 babel.config.js
 .prettierrc
-user.tsconfig.json
+tsconfig.json
 user-configs
 src

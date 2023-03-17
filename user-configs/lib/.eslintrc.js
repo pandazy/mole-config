@@ -1,4 +1,4 @@
-const moleEslint = require('@pandazy/mole-config/dist/eslint.config.js');
+const { default: moleEslint } = require('@pandazy/mole-config/dist/eslint.config.js');
 
 module.exports = {
   ...moleEslint,
