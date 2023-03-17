@@ -1,7 +1,9 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "./reserved/tsconfig.base.json",
   "compilerOptions": {
-    "sourceMap": false,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "sourceMap": false
   },
   "include": ["./src/**/*"]
 }

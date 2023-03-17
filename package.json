@@ -38,7 +38,8 @@
   },
   "files": [
     "dist",
-    "bin"
+    "bin",
+    "reserved"
   ],
   "bin": {
     "cfguntar": "./bin/untar.js",
