@@ -1,6 +1,6 @@
 {
   "name": "@pandazy/mole-config",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Configuration files for TypeScript projects",
   "repository": {
     "type": "git",
