@@ -21,7 +21,7 @@ function trimPathSlashes(path: string): string {
 export function getJestMapper() {
   return Object.entries(readUserMapping()).reduce((acc, [alias, path]) => ({
       ...acc,
-      [`^${alias}/(.*)$`]: `<rootDir>/${trimPathSlashes(path)}`
+      [`^${alias}/(.*)$`]: `<rootDir>/${trimPathSlashes(path)}/$1`
     }), {} as MolePaths);
 }
 
