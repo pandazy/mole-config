@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import { ProjectType } from './types';
 import { execSync } from 'child_process';
-import { getUserPath, getVendorPath } from './paths';
+import { getVendorPath } from './paths';
+import { TypeDependencies } from './type-deps';
 
 const getTarName = (dirName: string) => `${dirName}.tar.gz`;
 
@@ -23,26 +24,22 @@ export function tar() {
   });
 }
 
-/**
- * From the latest to the oldest in the dependency chain
- * The key is be the latest
- */
-const TarDependencies: Record<ProjectType, ProjectType[]> = {
-  lib: [],
-  'lib-react': ['lib'],
-  'app-react': ['lib'],
-  'app-rest': [],
-};
-
 export function untar(projectType: ProjectType, force = false) {
   const kpt = force ? '' : 'k';
-  const configNames = [projectType, ...TarDependencies[projectType]];
-  const destPath = getUserPath('.');
+  const configNames = [projectType, ...TypeDependencies[projectType]];
   configNames.forEach((configName) => {
     const tarName = `${configName}.tar.gz`;
     const srcConfigPath = getVendorPath('dist', tarName);
-    execSync(`tar -xz${kpt}f ${srcConfigPath} -C ${destPath}`, {
+    execSync(`tar -xz${kpt}f ${srcConfigPath}`, {
       stdio: 'inherit',
     });
+  });
+}
+
+export function updateTsconfigMole(projectType: ProjectType) {
+  const tarName = `${projectType}.tar.gz`;
+  const srcConfigPath = getVendorPath('dist', tarName);
+  execSync(`tar -xzf ${srcConfigPath} tsconfig-mole.json`, {
+    stdio: 'inherit',
   });
 }

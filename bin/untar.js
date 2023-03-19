@@ -13,8 +13,13 @@ const { argv } = yargs
     demandOption: true,
   })
   .option('f', {
+    hidden: true,
     alias: 'force',
     describe: 'Force extract config files even if the files already exist',
+  })
+  .option('h', {
+    default: false,
+    alias: 'help',
   })
   .strict();
 

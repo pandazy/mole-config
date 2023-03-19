@@ -42,8 +42,9 @@
     "reserved"
   ],
   "bin": {
-    "cfguntar": "./bin/untar.js",
-    "cfgpaths": "./bin/map-paths.js"
+    "molecfgx": "./bin/untar.js",
+    "molepaths": "./bin/map-paths.js",
+    "moletsconfig": "./bin/tsmole.js"
   },
   "scripts": {
     "cfgtar": "node ./bin/tar.js",

@@ -1,0 +1,26 @@
+{
+	"extends": "@pandazy/mole-config/reserved/tsconfig.base.json",
+	"compilerOptions": {
+		"target": "esnext",
+    "module": "esnext",
+    "jsx": "react",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "types": [
+      "jest",
+      "node",
+      "react"
+    ],
+		"outDir": "dist",
+		"baseUrl": "."
+	},
+	"include": [
+		"./src/**/*"
+	],
+	"exclude": [
+		"./node_modules/**/*",
+		"./dist/**/*"
+	]
+}
