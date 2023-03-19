@@ -26,8 +26,8 @@ export function tar() {
 export function untar(projectType: ProjectType, force = false) {
   const tarName = `${projectType}.tar.gz`;
   const srcConfigPath = getVendorPath('dist', tarName);
-  const options = force ? 'xzrf' : 'xzkf';
-  execSync(`tar -${options} ${srcConfigPath} -C ${getUserPath('.')}`, {
+  const overwriteFlag = force ? '--overwrite' : '';
+  execSync(`tar ${overwriteFlag} -xzf ${srcConfigPath} -C ${getUserPath('.')}`, {
     stdio: 'inherit',
   });
 }
