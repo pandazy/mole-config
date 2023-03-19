@@ -23,11 +23,26 @@ export function tar() {
   });
 }
 
+/**
+ * From the latest to the oldest in the dependency chain
+ * The key is be the latest
+ */
+const TarDependencies: Record<ProjectType, ProjectType[]> = {
+  lib: [],
+  'lib-react': ['lib'],
+  'app-react': ['lib'],
+  'app-rest': [],
+};
+
 export function untar(projectType: ProjectType, force = false) {
-  const tarName = `${projectType}.tar.gz`;
-  const srcConfigPath = getVendorPath('dist', tarName);
   const kpt = force ? '' : 'k';
-  execSync(`tar -xz${kpt}f ${srcConfigPath} -C ${getUserPath('.')}`, {
-    stdio: 'inherit',
+  const configNames = [projectType, ...TarDependencies[projectType]];
+  const destPath = getUserPath('.');
+  configNames.forEach((configName) => {
+    const tarName = `${configName}.tar.gz`;
+    const srcConfigPath = getVendorPath('dist', tarName);
+    execSync(`tar -xz${kpt}f ${srcConfigPath} -C ${destPath}`, {
+      stdio: 'inherit',
+    });
   });
 }
