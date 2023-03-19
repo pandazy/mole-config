@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const yargs = require('yargs');
+const { AllTypes } = require('../dist/types');
 
 const { updateTsconfigMole } = require("../dist/tars");
 
