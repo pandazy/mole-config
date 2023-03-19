@@ -18,5 +18,5 @@ const { argv } = yargs
   })
   .strict();
 
-untar(argv.type);
+untar(argv.type, argv.force);
 updateTsConfigPaths();
