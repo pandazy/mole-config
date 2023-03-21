@@ -2,8 +2,6 @@
 
 const yargs = require('yargs');
 const { AllTypes } = require('../dist/types');
-const { execSync } = require('child_process');
-const { getDevDeps } = require('../dist/dep-install.js');
 
 const { updateTsconfigMole } = require('../dist/tars');
 const {
@@ -24,6 +22,3 @@ const { argv } = yargs
 
 updateTsconfigMole(argv.type);
 updateTsConfigPaths();
-execSync(`yarn add --dev ${getDevDeps(argv.type).join(' ')}`, {
-  stdio: 'inherit',
-});
