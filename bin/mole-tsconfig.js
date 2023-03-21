@@ -1,8 +1,10 @@
 #!/usr/bin/env node
+
 const yargs = require('yargs');
 const { AllTypes } = require('../dist/types');
 
 const { updateTsconfigMole } = require("../dist/tars");
+const { default: updateTsConfigPaths } = require('../dist/update-tsconfig-paths');
 
 const { argv } = yargs
   .option('t', {
@@ -14,3 +16,4 @@ const { argv } = yargs
   .strict();
 
 updateTsconfigMole(argv.type);
+updateTsConfigPaths();

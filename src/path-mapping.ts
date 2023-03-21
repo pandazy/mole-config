@@ -19,17 +19,20 @@ function trimPathSlashes(path: string): string {
 }
 
 export function getJestMapper() {
-  return Object.entries(readUserMapping()).reduce((acc, [alias, path]) => ({
+  return Object.entries(readUserMapping()).reduce(
+    (acc, [alias, path]) => ({
       ...acc,
-      [`^${alias}/(.*)$`]: `<rootDir>/${trimPathSlashes(path)}/$1`
-    }), {} as MolePaths);
+      [`^${alias}/(.*)$`]: `<rootDir>/${trimPathSlashes(path)}/$1`,
+    }),
+    {} as MolePaths
+  );
 }
 
 export function getTsConfigPaths() {
   return Object.entries(readUserMapping()).reduce((acc, [alias, path]) => {
     return {
       ...acc,
-      [`${trimPathSlashes(alias)}/*`]: [`./${trimPathSlashes(path)}/*`]
+      [`${trimPathSlashes(alias)}/*`]: [`./${trimPathSlashes(path)}/*`],
     };
   }, {});
 }

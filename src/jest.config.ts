@@ -21,5 +21,5 @@ export default {
     'json',
   ]),
   testEnvironment: 'node',
-  moduleNameMapper: getJestMapper()
+  moduleNameMapper: getJestMapper(),
 };
