@@ -24,6 +24,3 @@ node_modules/
 
 dist
 __snapshots__
-
-.pandazy/docker
-.pandazy/_node_modules
