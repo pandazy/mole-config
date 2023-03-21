@@ -1,6 +1,7 @@
-import { getTsConfigPaths } from './path-mapping';
 import fs from 'fs';
+import { execSync } from 'child_process';
 import { getUserPath } from './paths';
+import { getTsConfigPaths } from './path-mapping';
 
 const ConfigFile = 'tsconfig-mole.json';
 
@@ -12,4 +13,5 @@ export default function updateTsConfigPaths() {
     tsConfig.compilerOptions.paths = paths;
   }
   fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
+  execSync(`yarn prettier --write ${ConfigFile}`, { stdio: 'inherit' });
 }

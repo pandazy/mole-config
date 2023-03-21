@@ -54,8 +54,7 @@
   },
   "scripts": {
     "mole-config-tar": "ts-node -T src/tar.run.ts",
-    "cfg:clean": "rm -rf dist",
-    "cfg:build": "yarn cfg:clean && node ./bin/mole-build.js && yarn mole-config-tar",
+    "cfg:build": "node ./bin/mole-build.js && yarn mole-config-tar",
     "cfg:release": "yarn cfg:build && yarn publish && git clean -fd"
   }
 }
