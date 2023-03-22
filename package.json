@@ -1,6 +1,6 @@
 {
   "name": "@pandazy/mole-config",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "description": "Configuration files for TypeScript projects",
   "repository": {
     "type": "git",
@@ -82,6 +82,6 @@
     "mole-config-tar": "ts-node -T -p tsconfig.json src/tar.run.ts",
     "build": "node ./bin/mole-build.js && yarn mole-config-tar",
     "test": "jest --coverage",
-    "release": "yarn test && yarn build && yarn publish && git clean -fd"
+    "release": "node bin/mole-release.js"
   }
 }
