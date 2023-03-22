@@ -82,6 +82,6 @@
     "mole-config-tar": "ts-node -T -p tsconfig.json src/tar.run.ts",
     "build": "node ./bin/mole-build.js && yarn mole-config-tar",
     "test": "jest --coverage",
-    "release": "node bin/mole-release.js"
+    "release": "yarn build && node bin/mole-release.js -s"
   }
 }
