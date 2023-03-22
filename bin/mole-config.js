@@ -9,6 +9,9 @@ const {
   default: updateTsConfigPaths,
 } = require('../dist/update-tsconfig-paths');
 const { getDevDeps } = require('../dist/dep-install.js');
+const {
+  default: updatePackageJSON,
+} = require('../dist/update-package-json.js');
 
 const { argv } = yargs
   .option('t', {
@@ -36,6 +39,7 @@ if (!argv.skipYarnAdd) {
   execSync(`yarn add --dev ${getDevDeps(argv.type).join(' ')}`, {
     stdio: 'inherit',
   });
+  updatePackageJSON();
 }
 untar(argv.type, argv.force);
 updateTsConfigPaths();
