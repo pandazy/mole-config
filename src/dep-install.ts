@@ -18,7 +18,13 @@ const DepsMap: Record<DepType, string[]> = {
     'babel-plugin-module-resolver',
   ],
   jest: ['@types/jest', 'jest', 'ts-jest'],
-  typescript: ['@types/node', 'typescript', 'ts-node', 'ts-lib'],
+  typescript: [
+    '@types/node',
+    'typescript',
+    'ts-node',
+    'ts-lib',
+    'tsconfig-paths',
+  ],
   eslint: [
     'eslint',
     '@typescript-eslint/eslint-plugin',

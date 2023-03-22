@@ -6,6 +6,7 @@ const yargs = require('yargs');
 
 const { argv } = yargs
   .option('s', {
+    type: 'boolean',
     alias: 'skipBuild',
     default: false,
     describe: 'If specified, skip building the code',
@@ -17,7 +18,7 @@ const { argv } = yargs
 
 execSync(
   [
-    ...(argv.skipBuild ? [] : ['yarn mole-build']),
+    ...(argv.s ? [] : ['yarn mole-build']),
     'yarn mole-lint',
     'rm -rf coverage',
     'yarn jest --clearCache',

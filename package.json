@@ -52,6 +52,7 @@
     "prettier": "^2.8.6",
     "ts-lib": "^0.0.5",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.2",
     "typescript": "^5.0.2"
   },
   "dependencies": {
@@ -79,9 +80,9 @@
     ]
   },
   "scripts": {
-    "mole-config-tar": "ts-node -T -p tsconfig.json src/tar.run.ts",
+    "mole-config-tar": "ts-node -r tsconfig-paths/register -T src/tar.run.ts ",
     "build": "node ./bin/mole-build.js && yarn mole-config-tar",
     "test": "jest --coverage",
-    "release": "yarn build && node bin/mole-release.js -s"
+    "release": "yarn build && ./bin/mole-release.js -s"
   }
 }

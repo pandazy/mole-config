@@ -26,6 +26,7 @@ const { argv } = yargs
     describe: 'Force extract config files even if the files already exist',
   })
   .option('s', {
+    type: 'boolean',
     alias: 'skipYarnAdd',
     default: false,
     describe: 'If specified, skip running yarn add --dev',
@@ -35,7 +36,7 @@ const { argv } = yargs
   })
   .strict();
 
-if (!argv.skipYarnAdd) {
+if (!argv.s) {
   execSync(`yarn add --dev ${getDevDeps(argv.type).join(' ')}`, {
     stdio: 'inherit',
   });
