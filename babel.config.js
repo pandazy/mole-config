@@ -1,5 +1,5 @@
-'use strict';
+"use strict";
 
-module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-typescript'],
-};
+const { default: babelConfig } = require("./dist/babel.config.js");
+
+module.exports = babelConfig;

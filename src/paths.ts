@@ -1,13 +1,14 @@
-import path from 'path';
+import { resolve } from 'path';
+import process from 'process';
 
-export default function getRoot() {
-  return path.resolve(__dirname, '..');
+export function getRoot(): string {
+  return resolve(__dirname, '..');
 }
 
-export function getVendorPath(...paths: string[]) {
-  return path.resolve(getRoot(), ...paths);
+export function getVendorPath(...paths: string[]): string {
+  return resolve(getRoot(), ...paths);
 }
 
-export function getUserPath(...paths: string[]) {
-  return path.resolve(process.cwd(), ...paths);
+export function getUserPath(...paths: string[]): string {
+  return resolve(process.cwd(), ...paths);
 }

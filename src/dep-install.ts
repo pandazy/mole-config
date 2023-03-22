@@ -44,15 +44,16 @@ const DepsMap: Record<DepType, string[]> = {
   ],
 };
 
-export const getDepsByTech = (tech: DepType) => DepsMap[tech].slice(0);
+export const getDepsByTech = (tech: DepType): string[] =>
+  DepsMap[tech].slice(0);
 
 const BasicDevDeps = [
-  ...DepsMap['mole'],
-  ...DepsMap['babel'],
-  ...DepsMap['jest'],
-  ...DepsMap['typescript'],
-  ...DepsMap['eslint'],
-  ...DepsMap['gitHooks'],
+  ...DepsMap.mole,
+  ...DepsMap.babel,
+  ...DepsMap.jest,
+  ...DepsMap.typescript,
+  ...DepsMap.eslint,
+  ...DepsMap.gitHooks,
 ];
 
 const InstallMap: Record<ProjectType, readonly string[]> = {
@@ -62,5 +63,5 @@ const InstallMap: Record<ProjectType, readonly string[]> = {
   'app-rest': BasicDevDeps,
 };
 
-export const getDevDeps = (projectType: ProjectType) =>
+export const getDevDeps = (projectType: ProjectType): string[] =>
   InstallMap[projectType].slice(0);

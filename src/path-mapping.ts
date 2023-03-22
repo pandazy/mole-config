@@ -1,24 +1,24 @@
-import fs from 'fs';
-import path from 'path';
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 import process from 'process';
 
 export type MolePaths = Record<string, string>;
 
 function readUserMapping(): MolePaths {
-  const userFolder = path.resolve(process.cwd(), 'mole-paths.json');
-  const molePathsContent = fs.readFileSync(userFolder, 'utf8');
-  return molePathsContent ? JSON.parse(molePathsContent) : {};
+  const userFolder = resolve(process.cwd(), 'mole-paths.json');
+  const molePathsContent = readFileSync(userFolder, 'utf8');
+  return molePathsContent ? (JSON.parse(molePathsContent) as MolePaths) : {};
 }
 
-export function getBabelAlias() {
+export function getBabelAlias(): MolePaths {
   return readUserMapping();
 }
 
-function trimPathSlashes(path: string): string {
-  return path.replace(/^\.\/|\/$/g, '');
+function trimPathSlashes(filePath: string): string {
+  return filePath.replace(/^\.\/|\/$/g, '');
 }
 
-export function getJestMapper() {
+export function getJestMapper(): MolePaths {
   return Object.entries(readUserMapping()).reduce(
     (acc, [alias, path]) => ({
       ...acc,
@@ -28,11 +28,22 @@ export function getJestMapper() {
   );
 }
 
-export function getTsConfigPaths() {
-  return Object.entries(readUserMapping()).reduce((acc, [alias, path]) => {
-    return {
+export function getTsConfigPaths(): Record<string, string[]> {
+  return Object.entries(readUserMapping()).reduce(
+    (acc, [alias, filePath]) => ({
       ...acc,
-      [`${trimPathSlashes(alias)}/*`]: [`./${trimPathSlashes(path)}/*`],
-    };
-  }, {});
+      [`${alias}/*`]: [`${trimPathSlashes(filePath)}/*`],
+    }),
+    {}
+  );
+}
+
+export function getResolvedPaths(): Record<string, string> {
+  return Object.entries(readUserMapping()).reduce(
+    (acc, [alias, filePath]) => ({
+      ...acc,
+      [`${alias}`]: resolve(process.cwd(), trimPathSlashes(filePath)),
+    }),
+    {}
+  );
 }

@@ -1,6 +1,8 @@
 dist
 node_modules
+.husky
 *.ts.snap
+bin/*.js
 babel.config.js
 jest.config.js
 jest.config.ts

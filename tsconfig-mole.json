@@ -1,0 +1,12 @@
+{
+  "extends": "./reserved/tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["./src/**/*", "./bin/**/*.ts"],
+  "exclude": ["./node_modules/**/*", "./dist/**/*", "./bin/**/*.js"]
+}

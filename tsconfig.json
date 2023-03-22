@@ -1,9 +1,3 @@
 {
-  "extends": "./reserved/tsconfig.base.json",
-  "compilerOptions": {
-    "outDir": "dist",
-    "baseUrl": ".",
-    "sourceMap": false
-  },
-  "include": ["./src/**/*"]
+  "extends": "./tsconfig-mole.json"
 }
