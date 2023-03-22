@@ -70,7 +70,8 @@
     "mole-lint": "./bin/mole-lint.js",
     "mole-husky": "./bin/mole-husky.js",
     "mole-path-alias": "./bin/mole-path-alias.js",
-    "mole-release": "./bin/mole-release.js"
+    "mole-release": "./bin/mole-release.js",
+    "mole-pkgjson": "./bin/mole-pkgjson.js"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
