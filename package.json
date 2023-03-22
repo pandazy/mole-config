@@ -48,9 +48,8 @@
     "mole-build": "./bin/mole-build.js",
     "mole-config": "./bin/mole-config.js",
     "mole-lint": "./bin/mole-lint.js",
-    "mole-path-alias": "./bin/mole-path-alias",
-    "mole-release": "./bin/mole-release",
-    "mole-tsconfig": "./bin/mole-tsconfig"
+    "mole-path-alias": "./bin/mole-path-alias.js",
+    "mole-release": "./bin/mole-release.js"
   },
   "scripts": {
     "mole-config-tar": "ts-node -T src/tar.run.ts",

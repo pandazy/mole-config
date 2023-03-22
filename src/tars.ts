@@ -36,10 +36,3 @@ export function untar(projectType: ProjectType, force = false) {
   });
 }
 
-export function updateTsconfigMole(projectType: ProjectType) {
-  const tarName = `${projectType}.tar.gz`;
-  const srcConfigPath = getVendorPath('dist', tarName);
-  execSync(`tar -xzf ${srcConfigPath} tsconfig-mole.json`, {
-    stdio: 'inherit',
-  });
-}

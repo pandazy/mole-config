@@ -1,14 +1,15 @@
 import { ProjectType } from './types';
 
 export type DepType =
+  | 'mole'
   | 'babel'
   | 'jest'
   | 'typescript'
   | 'eslint'
-  | 'eslintReactAddon'
   | 'gitHooks';
 
 const DepsMap: Record<DepType, string[]> = {
+  mole: ['@pandazy/mole-config'],
   babel: [
     '@babel/cli',
     '@babel/core',
@@ -30,8 +31,6 @@ const DepsMap: Record<DepType, string[]> = {
     'eslint-config-airbnb-typescript',
     'eslint-import-resolver-typescript',
     'eslint-plugin-jest',
-  ],
-  'eslintReactAddon': [
     'eslint-plugin-testing-library',
     'eslint-plugin-react',
     'eslint-plugin-react-hooks',
@@ -48,6 +47,7 @@ const DepsMap: Record<DepType, string[]> = {
 export const getDepsByTech = (tech: DepType) => DepsMap[tech].slice(0);
 
 const BasicDevDeps = [
+  ...DepsMap['mole'],
   ...DepsMap['babel'],
   ...DepsMap['jest'],
   ...DepsMap['typescript'],
@@ -57,8 +57,8 @@ const BasicDevDeps = [
 
 const InstallMap: Record<ProjectType, readonly string[]> = {
   lib: BasicDevDeps,
-  'lib-react': [...BasicDevDeps, ...DepsMap['eslintReactAddon']],
-  'app-react': [...BasicDevDeps, ...DepsMap['eslintReactAddon']],
+  'lib-react': BasicDevDeps,
+  'app-react': BasicDevDeps,
   'app-rest': BasicDevDeps,
 };
 
