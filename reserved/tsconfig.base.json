@@ -11,6 +11,7 @@
     "importHelpers": true,
     "lib": ["dom", "es2021"],
     "declaration": true,
+    "emitDeclarationOnly": true,
     "sourceMap": true,
     /* Strict Type-Checking Options */
     "strict": true,
