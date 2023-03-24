@@ -5,9 +5,6 @@ const yargs = require('yargs');
 
 const { untar } = require('../dist/tars');
 const { AllTypes } = require('../dist/types');
-const {
-  default: updateTsConfigPaths,
-} = require('../dist/update-tsconfig-paths');
 const { getDevDeps } = require('../dist/dep-install.js');
 const {
   default: updatePackageJSON,
@@ -43,4 +40,4 @@ if (!argv.s) {
   updatePackageJSON();
 }
 untar(argv.type, argv.force);
-updateTsConfigPaths();
+execSync('npx @pandazy/path-alias', { stdio: 'inherit' });

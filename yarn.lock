@@ -1488,6 +1488,15 @@
     tslib "^2.5.0"
     yargs "^17.7.1"
 
+"@pandazy/path-alias@^0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@pandazy/path-alias/0.1.1/d520e15f7ca069379a25d26e30e6a2fc8bd627cf#d520e15f7ca069379a25d26e30e6a2fc8bd627cf"
+  integrity sha512-HrIQNZVj4wP5zbRZn8H33cTXNdFPbumqHjlETC4G7tgZJLA7uksZtx25v1U6SIOha871WiVeAEiF6rMBhvXzDA==
+  dependencies:
+    ts-jest "^29.0.5"
+    tslib "^2.5.0"
+    yargs "^17.7.1"
+
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@pkgr/utils/-/utils-2.3.1.tgz#0a9b06ffddee364d6642b3cd562ca76f55b34a03"

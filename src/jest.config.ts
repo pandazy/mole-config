@@ -1,4 +1,4 @@
-import { getJestMapper } from './path-mapping';
+import { getJestMapper } from '@pandazy/path-alias/dist/path-mapping';
 import { defaults } from 'ts-jest/presets';
 import uniq from './uniq';
 
