@@ -6,9 +6,9 @@ import updatePackageJSON from './update-package-json';
 import { ProjectType } from './types';
 
 export default function main(argv: {
-  type: ProjectType;
-  force: boolean;
-  skipYarnAdd: boolean;
+  t: ProjectType;
+  f: boolean;
+  s: boolean;
 }): void {
   if (!hasGit()) {
     console.log(
@@ -24,12 +24,12 @@ export default function main(argv: {
     return;
   }
 
-  if (!argv.skipYarnAdd) {
-    execSync(`yarn add --dev ${getDevDeps(argv.type).join(' ')}`, {
+  if (!argv.s) {
+    execSync(`yarn add --dev ${getDevDeps(argv.t).join(' ')}`, {
       stdio: 'inherit',
     });
     updatePackageJSON();
   }
-  untar(argv.type, argv.force);
+  untar(argv.t, argv.f);
   execSync('npx @pandazy/path-alias', { stdio: 'inherit' });
 }
