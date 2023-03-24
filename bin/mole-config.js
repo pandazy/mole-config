@@ -1,15 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const yargs = require('yargs');
 
-const { untar } = require('../dist/tars');
-const { AllTypes } = require('../dist/types');
-const { getDevDeps } = require('../dist/dep-install');
-const { hasGit, hasNpm } = require('../dist/preq-check');
-const {
-  default: updatePackageJSON,
-} = require('../dist/update-package-json.js');
+const { default: main } = require('../dist/main');
 
 const { argv } = yargs
   .option('t', {
@@ -34,21 +27,4 @@ const { argv } = yargs
   })
   .strict();
 
-if (!hasGit()) {
-  console.log('Git is not initialized for this folder. Please run "git init" first.');
-  process.exit(1);
-}
-
-if (!hasNpm()) {
-  console.log('Npm is not initialized for this folder. Please run "npm init" first.');
-  process.exit(1);
-}
-
-if (!argv.s) {
-  execSync(`yarn add --dev ${getDevDeps(argv.type).join(' ')}`, {
-    stdio: 'inherit',
-  });
-  updatePackageJSON();
-}
-untar(argv.type, argv.force);
-execSync('npx @pandazy/path-alias', { stdio: 'inherit' });
+main(argv);
