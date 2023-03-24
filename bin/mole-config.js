@@ -34,12 +34,12 @@ const { argv } = yargs
   })
   .strict();
 
-if (hasGit()) {
+if (!hasGit()) {
   console.log('Git is not initialized for this folder. Please run "git init" first.');
   process.exit(1);
 }
 
-if (hasNpm()) {
+if (!hasNpm()) {
   console.log('Npm is not initialized for this folder. Please run "npm init" first.');
   process.exit(1);
 }
