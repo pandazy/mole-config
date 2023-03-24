@@ -9,7 +9,7 @@ export type DepType =
   | 'gitHooks';
 
 const DepsMap: Record<DepType, string[]> = {
-  mole: ['@pandazy/mole-config', '@pandazy/mole-scripts'],
+  mole: ['@pandazy/mole-scripts'],
   babel: [
     '@babel/cli',
     '@babel/core',
