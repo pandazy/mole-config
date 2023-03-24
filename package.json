@@ -29,6 +29,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@pandazy/mole-config": "^0.8.0",
+    "@pandazy/mole-scripts": "^0.1.0",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.5",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
@@ -66,23 +67,16 @@
     "bin",
     "reserved"
   ],
-  "bin": {
-    "mole-build": "./bin/mole-build.js",
-    "mole-config": "./bin/mole-config.js",
-    "mole-lint": "./bin/mole-lint.js",
-    "mole-husky": "./bin/mole-husky.js",
-    "mole-release": "./bin/mole-release.js",
-    "mole-pkgjson": "./bin/mole-pkgjson.js"
-  },
+  "bin": "./bin/mole-config.js",
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "node ./bin/mole-lint.js"
+      "yarn mole-lint"
     ]
   },
   "scripts": {
     "mole-config-tar": "ts-node -r tsconfig-paths/register -T src/tar.run.ts ",
-    "build": "node ./bin/mole-build.js && yarn mole-config-tar",
+    "build": "mole-build && yarn mole-config-tar",
     "test": "jest --coverage",
-    "release": "yarn build && ./bin/mole-release.js -s"
+    "release": "yarn build && mole-release -s"
   }
 }
