@@ -1488,11 +1488,13 @@
     tslib "^2.5.0"
     yargs "^17.7.1"
 
-"@pandazy/mole-scripts@^0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@pandazy/mole-scripts/0.1.0/280e6fa3660739afd5db4b82c926dc41398f84d6#280e6fa3660739afd5db4b82c926dc41398f84d6"
-  integrity sha512-U5mxRCZhqW4B/HfK3WGRU5pXFDenZno2CoBL27mTGnM2RAw2YGW1Rec6ra8SaOIFuQnjyUBttqH6Hqq9XZfpXQ==
+"@pandazy/mole-scripts@^0.2.1":
+  version "0.2.1"
+  resolved "https://npm.pkg.github.com/download/@pandazy/mole-scripts/0.2.1/8afe97b9d3f31ba8cedb3a838a306c05a643ef46#8afe97b9d3f31ba8cedb3a838a306c05a643ef46"
+  integrity sha512-/5NZWxlZxZcGR6HQV/p+dx5OsMR9IyZBvSLpWF6JND5nSNpl0w/nBWQgjxmXC+i6oMJ/9772+8P3VlqudDFnGw==
   dependencies:
+    "@pandazy/path-alias" "^0.1.1"
+    ts-jest "^29.0.5"
     yargs "^17.7.1"
 
 "@pandazy/path-alias@^0.1.1":

@@ -29,7 +29,6 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@pandazy/mole-config": "^0.8.0",
-    "@pandazy/mole-scripts": "^0.1.0",
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.5",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
@@ -58,6 +57,7 @@
   },
   "dependencies": {
     "@pandazy/path-alias": "^0.1.1",
+    "@pandazy/mole-scripts": "^0.2.1",
     "ts-jest": "^29.0.5",
     "tslib": "^2.5.0",
     "yargs": "^17.7.1"

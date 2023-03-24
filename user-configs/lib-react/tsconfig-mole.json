@@ -1,5 +1,5 @@
 {
-	"extends": "@pandazy/mole-config/reserved/tsconfig.base.json",
+	"extends": "@pandazy/mole-scripts/lib/tsconfig.base.json",
 	"compilerOptions": {
 		"target": "esnext",
     "module": "esnext",

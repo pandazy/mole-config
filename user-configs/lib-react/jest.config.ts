@@ -1,3 +1,3 @@
-import moleReactConfig from '@pandazy/mole-config/dist/jest.react.config';
+import moleReactConfig from '@pandazy/mole-scripts/lib/jest.react.config';
 
 export default moleReactConfig;

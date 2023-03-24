@@ -1,3 +1,3 @@
-import moleJestConfig from '@pandazy/mole-config/dist/jest.config';
+import moleJestConfig from '@pandazy/mole-scripts/lib/jest.config';
 
 export default moleJestConfig;
