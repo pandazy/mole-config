@@ -16,6 +16,7 @@ const DepsMap: Record<DepType, string[]> = {
     '@babel/preset-env',
     '@babel/preset-typescript',
     'babel-plugin-module-resolver',
+    '@pandazy/path-alias',
   ],
   jest: ['@types/jest', 'jest', 'ts-jest'],
   typescript: [
