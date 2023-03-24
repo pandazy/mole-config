@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-const { default: argv } = require('../dist/argv');
-main(argv);
+const { default: main } = require('../dist/main');
+main();

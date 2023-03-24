@@ -3,13 +3,11 @@ import { untar } from './tars';
 import { getDevDeps } from './dep-install';
 import { hasGit, hasNpm } from './preq-check';
 import updatePackageJSON from './update-package-json';
-import { ProjectType } from './types';
+import getArgv from './argv';
 
-export default function main(argv: {
-  t: ProjectType;
-  f: boolean;
-  s: boolean;
-}): void {
+export default function main(): void {
+  const argv = getArgv();
+
   if (!hasGit()) {
     console.log(
       'Git is not initialized for this folder. Please run "git init" first.'
