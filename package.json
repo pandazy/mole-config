@@ -77,6 +77,7 @@
     "mole-config-tar": "ts-node -r tsconfig-paths/register -T src/tar.run.ts ",
     "build": "mole-build && yarn mole-config-tar",
     "test": "jest --coverage",
+    "mole-release": "echo 'please use `yarn release` instead'",
     "release": "yarn build && mole-release -s"
   }
 }
