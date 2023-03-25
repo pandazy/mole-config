@@ -1,9 +1,11 @@
 import { execSync } from 'child_process';
+import { existsSync } from 'fs';
 import { untar } from './tars';
 import { getDevDeps } from './dep-install';
 import { hasGit, hasNpm } from './preq-check';
 import updatePackageJSON from './update-package-json';
 import getArgv from './argv';
+import { getUserPath } from './paths';
 
 export default function main(): void {
   const argv = getArgv();
@@ -27,7 +29,9 @@ export default function main(): void {
       stdio: 'inherit',
     });
     updatePackageJSON();
-    execSync('yarn mole-husky', { stdio: 'inherit' });
+    if (!existsSync(getUserPath('.husky'))) {
+      execSync('yarn mole-husky', { stdio: 'inherit' });
+    }
   }
 
   untar(argv.t, argv.f);
