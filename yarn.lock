@@ -1488,10 +1488,10 @@
     ts-jest "^29.0.5"
     yargs "^17.7.1"
 
-"@pandazy/monode@^0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@pandazy/monode/0.1.0/db41887907e1d632431c7a95716fdd2a19a6f1c8#db41887907e1d632431c7a95716fdd2a19a6f1c8"
-  integrity sha512-VctOuqZhlHlpFksYbqQ0nItSziRDAOffyAPyhkJDHTpdh8/HbsUMmHpElPiLRNOaFsWwPsbQGrvtYou2h8l7sA==
+"@pandazy/monode@^0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@pandazy/monode/0.1.1/78de678e2d5bfce858211c32b6d7e7a4ef53ee9e#78de678e2d5bfce858211c32b6d7e7a4ef53ee9e"
+  integrity sha512-vONq8o3C28ngXbPooIJvIXUt1FItZQfGayf4U6LR80Vo1rOART2iAcszUPWOZqL6gkWp1poBYAViVgVAf5jkIQ==
 
 "@pandazy/path-alias@^0.1.1":
   version "0.1.1"
