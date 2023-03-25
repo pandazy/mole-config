@@ -27,7 +27,9 @@ export default function main(): void {
       stdio: 'inherit',
     });
     updatePackageJSON();
+    execSync('yarn mole-husky', { stdio: 'inherit' });
   }
+
   untar(argv.t, argv.f);
   execSync('npx @pandazy/path-alias', { stdio: 'inherit' });
 }
