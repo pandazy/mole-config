@@ -1479,12 +1479,12 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pandazy/mole-scripts@^0.2.1":
-  version "0.2.1"
-  resolved "https://npm.pkg.github.com/download/@pandazy/mole-scripts/0.2.1/8afe97b9d3f31ba8cedb3a838a306c05a643ef46#8afe97b9d3f31ba8cedb3a838a306c05a643ef46"
-  integrity sha512-/5NZWxlZxZcGR6HQV/p+dx5OsMR9IyZBvSLpWF6JND5nSNpl0w/nBWQgjxmXC+i6oMJ/9772+8P3VlqudDFnGw==
+"@pandazy/mole-scripts@^0.3.1":
+  version "0.3.1"
+  resolved "https://npm.pkg.github.com/download/@pandazy/mole-scripts/0.3.1/13a48c4eb7087b2ab1d513ddc514fe7b2a7c1042#13a48c4eb7087b2ab1d513ddc514fe7b2a7c1042"
+  integrity sha512-yGwVxJRhVEehQ94FT+Tfy/gKqcbkzEojlbrAfT+i02ZpoaJylSBPYxoxEINVMevmyVa0YM9k6tYO/LosDzr7MQ==
   dependencies:
-    "@pandazy/path-alias" "^0.1.1"
+    "@pandazy/path-alias" "^0.2.2"
     ts-jest "^29.0.5"
     yargs "^17.7.1"
 
@@ -1493,10 +1493,10 @@
   resolved "https://npm.pkg.github.com/download/@pandazy/monode/0.1.1/78de678e2d5bfce858211c32b6d7e7a4ef53ee9e#78de678e2d5bfce858211c32b6d7e7a4ef53ee9e"
   integrity sha512-vONq8o3C28ngXbPooIJvIXUt1FItZQfGayf4U6LR80Vo1rOART2iAcszUPWOZqL6gkWp1poBYAViVgVAf5jkIQ==
 
-"@pandazy/path-alias@^0.1.1":
-  version "0.1.1"
-  resolved "https://npm.pkg.github.com/download/@pandazy/path-alias/0.1.1/d520e15f7ca069379a25d26e30e6a2fc8bd627cf#d520e15f7ca069379a25d26e30e6a2fc8bd627cf"
-  integrity sha512-HrIQNZVj4wP5zbRZn8H33cTXNdFPbumqHjlETC4G7tgZJLA7uksZtx25v1U6SIOha871WiVeAEiF6rMBhvXzDA==
+"@pandazy/path-alias@^0.2.2":
+  version "0.2.2"
+  resolved "https://npm.pkg.github.com/download/@pandazy/path-alias/0.2.2/a1486e143a44555f80d238ff410e1461f1369174#a1486e143a44555f80d238ff410e1461f1369174"
+  integrity sha512-M7unF8AwG0xL/fcxpyd241L4OtILpZn63USA6iGObicQDu0G50+81kwGE2uiclVqzS2q50gXWKZqH7BzX/KFog==
   dependencies:
     ts-jest "^29.0.5"
     tslib "^2.5.0"
