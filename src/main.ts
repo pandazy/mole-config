@@ -41,5 +41,4 @@ export default async function main(): Promise<void> {
   }
 
   untar(projectType, argv.f);
-  execSync('npx @pandazy/path-alias', { stdio: 'inherit' });
 }

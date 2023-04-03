@@ -1,14 +1,3 @@
-const { getBabelAlias } = require('@pandazy/path-alias/dist/path-mapping');
+const babelConfig = require("@pandazy/mole-scripts/lib/babel.config");
 
-module.exports = {
-  presets: ['@babel/preset-env', '@babel/preset-typescript'],
-  plugins: [
-    [
-      'module-resolver',
-      {
-        alias: getBabelAlias(),
-      },
-    ],
-  ],
-  ignore: ['**/*.spec.ts'],
-};
+module.exports = babelConfig;
